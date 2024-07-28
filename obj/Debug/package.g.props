@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PackageJsonName Condition="$(PackageJsonName) == ''">com.midi-mixer.template</PackageJsonName>
+    <PackageJsonVersion Condition="$(PackageJsonVersion) == ''">1.0.2</PackageJsonVersion>
+    <PackageJsonDescription Condition="$(PackageJsonDescription) == ''">A template plugin for MIDI Mixer that demonstrates how to interact with MIDI Mixer's API.</PackageJsonDescription>
+    <PackageJsonMain Condition="$(PackageJsonMain) == ''">lib/main.js</PackageJsonMain>
+    <PackageJsonDirectoriesLib Condition="$(PackageJsonDirectoriesLib) == ''">lib</PackageJsonDirectoriesLib>
+    <PackageJsonScriptsTest Condition="$(PackageJsonScriptsTest) == ''">echo "Error: no test specified" &amp;&amp; exit 1</PackageJsonScriptsTest>
+    <PackageJsonScriptsBuild Condition="$(PackageJsonScriptsBuild) == ''">tsc</PackageJsonScriptsBuild>
+    <PackageJsonScriptsBuildWatch Condition="$(PackageJsonScriptsBuildWatch) == ''">tsc --watch</PackageJsonScriptsBuildWatch>
+    <PackageJsonScriptsDist Condition="$(PackageJsonScriptsDist) == ''">midi-mixer pack</PackageJsonScriptsDist>
+    <PackageJsonKeywords Condition="$(PackageJsonKeywords) == ''">[
+  "midi-mixer",
+  "midi",
+  "mixer",
+  "template",
+  "plugin"
+]</PackageJsonKeywords>
+    <PackageJsonAuthor Condition="$(PackageJsonAuthor) == ''">Jack Williams &lt;@jpwilliams&gt;</PackageJsonAuthor>
+    <PackageJsonLicense Condition="$(PackageJsonLicense) == ''">ISC</PackageJsonLicense>
+    <PackageJsonDependenciesMidiMixerPlugin Condition="$(PackageJsonDependenciesMidiMixerPlugin) == ''">^1.0.2</PackageJsonDependenciesMidiMixerPlugin>
+    <PackageJsonBundleddependencies Condition="$(PackageJsonBundleddependencies) == ''">[
+  "midi-mixer-plugin"
+]</PackageJsonBundleddependencies>
+    <PackageJsonDevdependenciesMidiMixerCli Condition="$(PackageJsonDevdependenciesMidiMixerCli) == ''">^1.0.4</PackageJsonDevdependenciesMidiMixerCli>
+    <PackageJsonDevdependenciesTypescript Condition="$(PackageJsonDevdependenciesTypescript) == ''">^4.5.5</PackageJsonDevdependenciesTypescript>
+  </PropertyGroup>
+</Project>

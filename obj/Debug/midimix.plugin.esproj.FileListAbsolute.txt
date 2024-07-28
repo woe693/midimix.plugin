@@ -1,0 +1,1 @@
+C:\Users\woe\AppData\Roaming\midi-mixer-app\plugins\midimix.plugin\obj\Debug\midimix.plugin.esproj.CoreCompileInputs.cache
