@@ -1,0 +1,36 @@
+{
+  "$schema": "./node_modules/midi-mixer-plugin/plugin.schema.json",
+  "version": "1.1.2",
+  "id": "com.midi-mixer.discord",
+  "name": "Discord",
+  "type": "node",
+  "main": "lib/index.js",
+  "icon": "icon.svg",
+  "settings": {
+    "clientId": {
+      "label": "Client ID",
+      "required": true,
+      "type": "text"
+    },
+    "clientSecret": {
+      "label": "Client Secret",
+      "required": true,
+      "type": "password"
+    },
+    "presence": {
+      "label": "Presence (populate to disable)",
+      "type": "text",
+      "fallback": "On"
+    },
+    "status": {
+      "label": "Status",
+      "type": "status",
+      "fallback": "Disconnected"
+    },
+    "reconnect": {
+      "label": "Reconnect",
+      "type": "button"
+    }
+  },
+  "author": "MIDI Mixer"
+}

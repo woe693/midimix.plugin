@@ -1,0 +1,54 @@
+{
+  "name": "com.midi-mixer.discord",
+  "version": "1.1.2",
+  "private": true,
+  "description": "A Discord plugin for MIDI Mixer.",
+  "files": [
+    "icon.svg",
+    "PAGE.md",
+    "plugin.json",
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "pack": "rimraf ./*.tgz && rimraf ./*.midiMixerPlugin && npm pack && npx ts-node scripts/rename-package.ts",
+    "semantic-release": "semantic-release",
+    "postversion": "npx ts-node scripts/bump-manifest.ts && npm run pack"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@types/discord-rpc": "^3.0.5",
+    "@types/node": "^15.12.1",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.4.3",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "conf": "^10.0.1",
+    "discord-rpc": "^3.2.0",
+    "midi-mixer-plugin": "^0.3.0"
+  },
+  "bundledDependencies": [
+    "conf",
+    "discord-rpc",
+    "midi-mixer-plugin"
+  ],
+  "volta": {
+    "node": "14.15.4",
+    "npm": "6.14.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/midi-mixer/plugin-discord.git"
+  }
+}
